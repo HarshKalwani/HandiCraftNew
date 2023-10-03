@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto&display=swap');
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+    font-family: 'Poppins', sans-serif;
+/* font-family: 'Roboto', sans-serif; */
+overflow-y: scroll; /* Enable vertical scrolling */
+scroll-snap-type: y mandatory; /* Enable vertical scrolling snapping */
+/* Optional: Customize scroll behavior */
+scroll-behavior: smooth;
+}
+
+.mainLeadHero {
+  background-image: url('assets/bgimg.jpeg');
+  background-size: cover; /* Default: cover for all screen sizes */
+
+  /* Other background properties go here */
+
+  /* Media query for medium screens */
+  @media screen and (max-width: 768px) {
+    background-size: contain; /* Change to contain for medium screens */
+  }
+
+  /* Media query for small screens */
+  @media screen and (max-width: 480px) {
+    background-size: cover; /* Change to contain for small screens */
+  }
+}
+
+.bg-img{
+  background-image: url(assets/Rectangle1.png);
+}
