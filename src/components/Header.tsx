@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { FaTimes } from "react-icons/fa";
 import { FaBarsStaggered } from 'react-icons/fa6';
+import Link from 'next/link';
+import Hero from './Hero';
 
 
 const Header = () => {
@@ -21,8 +23,12 @@ const Header = () => {
 
                 <div className=''>
                     <ul className='hidden gap-11 h-[1.5rem] text-[#000] text-[1rem] leading-normal font-semibold font-sans md:flex sm:hidden lg:flex mr-8'>
-                        <li className='hover:underline'>Home</li>
-                        <li className='hover:underline'>Shop</li>
+                        <li className='hover:underline'>
+                            <Link href="/home">Home</Link>
+                        </li>
+                        <li className='hover:underline'>
+                            Shop
+                        </li>
                         <li className='hover:underline'>About</li>
                         <li className='hover:underline'>Contact Us</li>
                     </ul>
