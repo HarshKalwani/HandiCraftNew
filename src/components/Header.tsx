@@ -13,6 +13,20 @@ const Header = () => {
     const handleMenu = () => {
         setOpen( (prev) => !prev);
     }
+
+    const toProducts=() =>{
+        const target=document.getElementById("Products");
+        if(target){
+            target.scrollIntoView({behavior:'smooth'});
+        }
+    };
+
+    const toFooter=() => {
+        const target = document.getElementById("Footer");
+        if(target){
+            target.scrollIntoView({behavior:"smooth"});
+        }
+    };
     return (
         <div>
             <div className='flex w-full min-h-[5.5rem] justify-between items-center'>
@@ -26,11 +40,11 @@ const Header = () => {
                         <li className='hover:underline'>
                             <Link href="/home">Home</Link>
                         </li>
-                        <li className='hover:underline'>
+                        <li className='hover:underline' onClick={toProducts}>
                             Shop
                         </li>
                         <li className='hover:underline'>About</li>
-                        <li className='hover:underline'>Contact Us</li>
+                        <li className='hover:underline' onClick={toFooter}>Contact Us</li>
                     </ul>
                 </div>
 
@@ -45,10 +59,10 @@ const Header = () => {
                 <div className='md:hidden'>
                     <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
                     <ul className='text-[#000] px-3 py-2 rounded-md text-base mx-auto flex flex-col text-center text-[1rem] leading-normal font-semibold font-sans gap-4'>
-                    <li className='hover:underline'>Home</li>
-                        <li className='hover:underline'>Shop</li>
+                        <li className='hover:underline'><Link href="/home">Home</Link></li>
+                        <li className='hover:underline'onClick={toProducts}>Shop</li>
                         <li className='hover:underline'>About</li>
-                        <li className='hover:underline'>Contact Us</li>
+                        <li className='hover:underline' onClick={toFooter} >Contact Us</li>
                     </ul>
                     </div>
                 </div>

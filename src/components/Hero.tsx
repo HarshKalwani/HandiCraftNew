@@ -6,7 +6,7 @@ function Hero() {
         <>
             <div className="w-screen lg:h-screen overflow-hidden bg-white text-black">
                 <h1 className="text-3xl mt-12 font-semibold">Browse The Range</h1>
-                <h3 className="mx-[2rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                <h3 className="mx-[2rem]">Select your Category listed Below </h3>
                 <span>
                     <ul className="flex p-2 flex-col md:flex-row justify-between lg:mx-[19rem] md:mx-[2rem] md:gap-2 mt-[2rem]">
                       

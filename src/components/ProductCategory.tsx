@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from "react";
+import {SiWhatsapp} from 'react-icons/si'
 
 function ProductCategoty() {
     // Create an array of product objects
@@ -113,6 +114,12 @@ function ProductCategoty() {
         productsRows.push(products.slice(i, i + 4));
     }
 
+    const phoneNumber = '+91 9079879306';
+    const handleFunc = () => {
+        const whatsappURL = `https://wa.me/${phoneNumber}`;
+        window.open(whatsappURL, '_blank');
+      };
+
 
 
     return (
@@ -132,7 +139,7 @@ function ProductCategoty() {
                 </div>
             ))}
             <div className="flex justify-center items-center">
-                 <button className="p-4 mt-6  text-2xl font-semibold border border-2 rounded-md hover:bg-black hover:text-white">Show More</button>
+            <button className='h-[3rem] border-green-600 border-y-2 flex justify-between items-center gap-2 border-x-2 rounded-md p-3 bg-green-600 text-white mt-[3rem] font-sans' onClick={handleFunc}>Liked This ? Take a Screenshot and Whatsapp us <span> <SiWhatsapp /> </span></button>
             </div>
         </div>
     );

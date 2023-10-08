@@ -95,9 +95,9 @@ function Products() {
                         {row.map((product, index) => (
                             <div key={index} className="h-[23rem] w-96 p-4 bg-gray-100 shadow-sm rounded-sm">
                                 <div className="h-56 md:w-[18.3rem]  bg-blue-500 relative">
-                                    <Link href="/singlecategory">
+                                    
                                         <img className="object-cover w-full h-full" src={product.imageUrl} alt="Image not found"/>
-                                    </Link>
+                                    
                                 </div>
                                 <h1 className="mx-4 mt-5 text-2xl font-semibold">{product.title}</h1>
                                 <h3 className="mx-4 mt-2 text-gray-500">{product.description}</h3>

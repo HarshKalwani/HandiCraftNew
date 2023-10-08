@@ -9,7 +9,7 @@ import AdderSection from "@/components/jscomponents/AdderSection";
 
 function Home() {
   return (
-    <div className="flex flex-col gap-10 md:gap-0">
+    <div className="flex flex-col gap-10 md:gap-0 mx-auto overflow-x-hidden">
       <div>
         <Header />
       </div>
@@ -20,13 +20,13 @@ function Home() {
         <div className="flex justify-center items-center text-center ">
           <Hero />
         </div>
-        <div className="flex justify-center items-center text-center ">
-          <Products />
+        <div className="flex justify-center items-center text-center " id="Products">
+          <Products/>
         </div>
         <div className="flex justify-center items-center text-center overflow-hidden mt-2">
           <AdderSection />
         </div>
-        <div className="flex justify-center items-center text-center overflow-hidden">
+        <div className="flex justify-center items-center text-center overflow-hidden" id="Footer">
           <Footer />
         </div>
       </div>
