@@ -6,8 +6,7 @@ import Footer from "./Footer";
 
 const SingleCategory = () => {
   return (
-    <div className="relative bg-white flex flex-col ">
-      
+    <div className="flex flex-col gap-10 md:gap-0 mx-auto overflow-x-hidden">
       <div>
         <Header />
       </div>
@@ -16,13 +15,13 @@ const SingleCategory = () => {
           Woodworking Wonders, Made by Hand
         </p>
       </div>
-      <div className="relative mt-[5rem]">
+      <div className="flex  justify-center items-center text-center ">
         <ProductCategory />
       </div>
-      <div className="relative mt-2">
+      <div className="flex justify-center items-center text-center overflow-hidden mt-2">
         <AdderSection />
       </div>
-      <div className="relative ">
+      <div className="flex justify-center items-center text-center overflow-hidden">
         <Footer />
       </div>
     </div>
