@@ -1,9 +1,11 @@
 "use client"
 import React, { useState } from "react";
-import {SiWhatsapp} from 'react-icons/si'
+import { SiWhatsapp } from 'react-icons/si'
+import { useRouter } from 'next/navigation';
+import Link from "next/link";
 
-function ProductCategoty() {
-    // Create an array of product objects
+function ProductCategory() {
+    const router = useRouter();
     const initialProducts = [
         {
             title: "Syltherine",
@@ -16,7 +18,7 @@ function ProductCategoty() {
             description: "Elegant dining table",
             price: "Rp 3.200.000",
             imageUrl: "https://i.pinimg.com/736x/94/9a/59/949a59d551f45511a940bbe5cca80d3a.jpg"
-           
+
         },
         {
             title: "Cozy Armchair",
@@ -65,7 +67,7 @@ function ProductCategoty() {
             description: "Elegant dining table",
             price: "Rp 3.200.000",
             imageUrl: "https://i.pinimg.com/736x/94/9a/59/949a59d551f45511a940bbe5cca80d3a.jpg"
-           
+
         },
         {
             title: "Cozy Armchair",
@@ -118,32 +120,47 @@ function ProductCategoty() {
     const handleFunc = () => {
         const whatsappURL = `https://wa.me/${phoneNumber}`;
         window.open(whatsappURL, '_blank');
-      };
+    };
 
+    const handleProductClick = (product: any) => {
+        router.push(`/product?title=${product.title}&url=${product.imageUrl}`);
+      };
+      
 
 
     return (
-        <div className="w-screen md:p-4 md:h-[106em] lg:h-screen overflow-x-hidden bg-white text-black mx-auto">
+        <div className="w-full md:p-4 md:h-[110rem] lg:h-[110rem] overflow-auto bg-white text-black">
             <h1 className="text-3xl font-semibold text-center">Our Products</h1>
             {productsRows.map((row, rowIndex) => (
-                <div key={rowIndex} className="md:flex md:justify-between gap-12 lg:mx-[19rem] md:mx-[8rem]  mt-[2rem] text-start mx-auto">
+
+                <div key={rowIndex} className="md:flex md:justify-between gap-12  md:mx-[8rem]  mt-[2rem] text-start mx-auto">
                     {row.map((product, index) => (
-                        <div key={index} className="h-[23rem] w-96 p-4 bg-gray-100 shadow-sm rounded-sm">
+                        <Link href={{
+                            pathname:"/product",
+                            query:{
+                               title:product.title,
+                               imageUrl:product.imageUrl,
+                               description:product.description
+                            }
+                        }} key ={index}>
+                        <div key={index} className="h-[23rem] w-82 p-4 bg-gray-100 shadow-sm rounded-sm">
                             <div className="h-56 md:w-[18.3rem]  bg-blue-500 relative">
-                                <img className="object-cover w-full h-full" src={product.imageUrl} alt="Image not found"/>
+                                <img className="object-cover w-full h-full" src={product.imageUrl} alt="Image not found" />
                             </div>
                             <h1 className="mx-4 mt-5 text-2xl font-semibold">{product.title}</h1>
                             <h3 className="mx-4 mt-2 text-gray-500">{product.description}</h3>
                         </div>
+                        </Link>
                     ))}
                 </div>
+
             ))}
             <div className="flex justify-center items-center">
-            <button className='h-[3rem] border-green-600 border-y-2 flex justify-between items-center gap-2 border-x-2 rounded-md p-3 bg-green-600 text-white mt-[3rem] font-sans' onClick={handleFunc}>Liked This ? Take a Screenshot and Whatsapp us <span> <SiWhatsapp /> </span></button>
+                <button className='h-[3rem] border-green-600 border-y-2 flex justify-between items-center gap-2 border-x-2 rounded-md p-3 bg-green-600 text-white mt-[3rem] font-sans' onClick={handleFunc}>Liked This ? Take a Screenshot and Whatsapp us <span> <SiWhatsapp /> </span></button>
             </div>
         </div>
     );
 }
 
 
-export default ProductCategoty;
+export default ProductCategory;
