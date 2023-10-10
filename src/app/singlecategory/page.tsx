@@ -7,7 +7,7 @@ import Products from "@/components/Products";
 import Footer from "@/components/jscomponents/Footer";
 import HeroMain from "@/components/jscomponents/HeroMain";
 import AdderSection from "@/components/jscomponents/AdderSection";
-import ProductCategoty from "@/components/ProductCategory";
+import ProductCategory from "@/components/ProductCategory";
 
 function Page() {
   return (
@@ -22,7 +22,7 @@ function Page() {
           </p>
         </div>
         <div className=" " id="Products">
-          <ProductCategoty/>
+          <ProductCategory/>
         </div>
         <div className="flex justify-center items-center text-center overflow-hidden mt-2">
           <AdderSection />
