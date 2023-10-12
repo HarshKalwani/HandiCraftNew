@@ -9,7 +9,7 @@ import HeroMain from "@/components/jscomponents/HeroMain";
 import AdderSection from "@/components/jscomponents/AdderSection";
 import ProductCategory from "@/components/ProductCategory";
 
-function Page({ searchParams }: { searchParams: string }) {
+function Page({searchParams}:any) {
   return (
     <div className="flex flex-col gap-10 md:gap-0 mx-auto overflow-x-hidden">
       <div>

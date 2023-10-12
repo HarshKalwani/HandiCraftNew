@@ -19,7 +19,7 @@ function Hero() {
                                 href={{
                                     pathname: "/singlecategory",
                                     query: {
-                                        type: type, // Send the string as the 'type' query parameter
+                                        type: type, 
                                     },
                                 }}
                             >
