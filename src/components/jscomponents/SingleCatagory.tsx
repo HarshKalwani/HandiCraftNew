@@ -4,7 +4,7 @@ import ProductCategory from "../ProductCategory";
 import AdderSection from "./AdderSection";
 import Footer from "./Footer";
 
-const SingleCategory = () => {
+const SingleCategory = ({searchParams}:any) => {
   return (
     <div className="flex flex-col gap-10 md:gap-0 mx-auto overflow-x-hidden">
       <div>
@@ -16,7 +16,7 @@ const SingleCategory = () => {
         </p>
       </div>
       <div className="flex  justify-center items-center text-center ">
-        <ProductCategory />
+        <ProductCategory type={searchParams.type.toString()} />
       </div>
       <div className="flex justify-center items-center text-center overflow-hidden mt-2">
         <AdderSection />
