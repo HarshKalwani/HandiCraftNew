@@ -4,7 +4,7 @@ import { SiWhatsapp } from 'react-icons/si'
 import { useRouter } from 'next/navigation';
 import Link from "next/link";
 
-function ProductCategory() {
+function ProductCategory({type}:{type:string}) {
     const router = useRouter();
     const initialProducts = [
         {
@@ -182,13 +182,17 @@ function ProductCategory() {
     // Use state to store the product data
     const [products, setProducts] = useState(initialProducts);
 
-    // Split the products into groups of 4 for each row
+    // Filter products based on the type prop
+    const filteredProducts = products.filter(product => product.type === type);
+
+    // Split the filtered products into groups of 4 for each row
     const productsRows = [];
-    for (let i = 0; i < products.length; i += 4) {
-        productsRows.push(products.slice(i, i + 4));
+    for (let i = 0; i < filteredProducts.length; i += 4) {
+        productsRows.push(filteredProducts.slice(i, i + 4));
     }
 
     const phoneNumber = '+91 9079879306';
+
     const handleFunc = () => {
         const whatsappURL = `https://wa.me/${phoneNumber}`;
         window.open(whatsappURL, '_blank');
@@ -197,35 +201,31 @@ function ProductCategory() {
     const handleProductClick = (product: any) => {
         router.push(`/product?title=${product.title}&url=${product.imageUrl}`);
     };
-      
-
 
     return (
-        <div className="w-full md:p-4 md:h-[110rem] lg:h-[110rem] overflow-auto bg-white text-black">
+        <div className="w-full md:p-4 md:h-[65rem] lg:h-[65rem] overflow-auto bg-white text-black">
             <h1 className="text-3xl font-semibold text-center">Our Products</h1>
             {productsRows.map((row, rowIndex) => (
-
-                <div key={rowIndex} className="md:flex md:justify-between gap-12  md:mx-[8rem]  mt-[2rem] text-start mx-auto">
+                <div key={rowIndex} className="md:flex md:justify-between gap-12 md:mx-[8rem] mt-[2rem] text-start mx-auto">
                     {row.map((product, index) => (
                         <Link href={{
-                            pathname:"/product",
-                            query:{
-                               title:product.title,
-                               imageUrl:product.imageUrl,
-                               description:product.description
+                            pathname: "/product",
+                            query: {
+                                title: product.title,
+                                imageUrl: product.imageUrl,
+                                description: product.description
                             }
-                        }} key ={index}>
-                        <div key={index} className="h-[23rem] w-82 p-4 bg-gray-100 shadow-sm rounded-sm">
-                            <div className="h-56 md:w-[18.3rem]  bg-blue-500 relative">
-                                <img className="object-cover w-full h-full" src={product.imageUrl} alt="Image not found" />
+                        }} key={index}>
+                            <div key={index} className="h-[23rem] w-82 p-4 bg-gray-100 shadow-sm rounded-sm">
+                                <div className="h-56 md:w-[18.3rem]  bg-blue-500 relative">
+                                    <img className="object-cover w-full h-full" src={product.imageUrl} alt="Image not found" />
+                                </div>
+                                <h1 className="mx-4 mt-5 text-2xl font-semibold">{product.title}</h1>
+                                <h3 className="mx-4 mt-2 text-gray-500">{product.description}</h3>
                             </div>
-                            <h1 className="mx-4 mt-5 text-2xl font-semibold">{product.title}</h1>
-                            <h3 className="mx-4 mt-2 text-gray-500">{product.description}</h3>
-                        </div>
                         </Link>
                     ))}
                 </div>
-
             ))}
             <div className="flex justify-center items-center">
                 <button className='h-[3rem] border-green-600 border-y-2 flex justify-between items-center gap-2 border-x-2 rounded-md p-3 bg-green-600 text-white mt-[3rem] font-sans' onClick={handleFunc}>Liked This ? Take a Screenshot and Whatsapp us <span> <SiWhatsapp /> </span></button>
@@ -233,6 +233,5 @@ function ProductCategory() {
         </div>
     );
 }
-
 
 export default ProductCategory;
