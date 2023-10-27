@@ -20,7 +20,7 @@ function Home() {
         <div className="flex justify-center items-center text-center ">
           <Hero />
         </div>
-        <div className="flex justify-center items-center text-center " id="Products">
+        <div className="flex justify-center items-center text-center  " id="Products">
           <Products/>
         </div>
         <div className="flex justify-center items-center text-center overflow-hidden mt-2">

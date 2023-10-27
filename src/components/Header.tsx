@@ -46,7 +46,7 @@ const Header = () => {
                 <div className=''>
                     <ul className='hidden gap-11 h-[1.5rem] text-[#000] text-[1rem] leading-normal font-semibold font-sans md:flex sm:hidden lg:flex mr-8'>
                         <li className='hover:underline'>
-                            <Link href="/home">Home</Link>
+                            <Link href="/">Home</Link>
                         </li>
                         <li className='hover:underline' onClick={toProducts}>
                             Shop
@@ -67,7 +67,7 @@ const Header = () => {
                 <div className='md:hidden'>
                     <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
                         <ul className='text-[#000] px-3 py-2 rounded-md text-base mx-auto flex flex-col text-center text-[1rem] leading-normal font-semibold font-sans gap-4'>
-                            <li className='hover:underline'><Link href="/home">Home</Link></li>
+                            <li className='hover:underline'><Link href="/">Home</Link></li>
                             <li className='hover:underline' onClick={toProducts}>Shop</li>
                             <li className='hover:underline'>About</li>
                             <li className='hover:underline' onClick={toFooter} >Contact Us</li>
