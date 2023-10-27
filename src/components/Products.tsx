@@ -86,8 +86,8 @@ function Products() {
 
 
     return (
-        <div className="w-full lg[-ml-32] md:p-4 md:h-[110rem] lg:h-[60rem] overflow-auto bg-white text-black">
-            <h1 className="text-3xl font-semibold ml-32">Our Products</h1>
+        <div className="w-full md:p-4 md:h-[110rem] lg:h-[60rem] overflow-auto bg-white text-black">
+            <h1 className="text-3xl font-semibold">Our Products</h1>
             <div>
 
                 {productsRows.map((row, rowIndex) => (
