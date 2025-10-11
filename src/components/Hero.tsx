@@ -37,7 +37,7 @@ function Hero() {
                                     },
                                 }}
                             >
-                                <img className="lg:w-[400px] lg:h-[680px] rounded-md md:w-[300px] md:h-[480px]" src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="" />
+                                <img className="lg:w-[400px] lg:h-[680px] rounded-md md:w-[300px] md:h-[480px]" src="https://m.media-amazon.com/images/I/81CL5OZm4kL._UF894,1000_QL80_.jpg" alt="" />
                             </Link>
                             <h1 className="mt-2 ">Side-boards</h1></li>
                         <li>
@@ -49,7 +49,7 @@ function Hero() {
                                     },
                                 }}
                             >
-                                <img className="lg:w-[400px] lg:h-[680px] rounded-md md:w-[300px] md:h-[480px]" src="https://images.unsplash.com/photo-1556020685-ae41abfc9365?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJlZHJvb218ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+                                <img className="lg:w-[400px] lg:h-[680px] rounded-md md:w-[300px] md:h-[480px]" src="https://images.squarespace-cdn.com/content/v1/61b0ec01017ed8182b6f7cdd/09243000-4bb1-4275-8877-2da88c1532cc/IMG_1817_HighQuality.jpg" alt="" />
                             </Link>
                             <h1 className="mt-2">Chairs</h1></li>
                     </ul>
