@@ -21,7 +21,7 @@ const Footer = () => {
           </div>
           <div className='flex flex-col text-left text-white font-semibold'>
             <h1 className='lg:text-4xl text-3xl'>Contact Us</h1>
-            <h2 className='lg:text-3xl'>arihantartsexports@gmail.com</h2>
+            <h2 className='lg:text-3xl'>arihantartsexport@gmail.com</h2>
             <h2 className='lg:text-3xl'>+91 9079879306</h2>
           </div>
         </span>
