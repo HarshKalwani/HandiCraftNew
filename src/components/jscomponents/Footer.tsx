@@ -21,14 +21,14 @@ const Footer = () => {
           </div>
           <div className='flex flex-col text-left text-white font-semibold'>
             <h1 className='lg:text-4xl text-3xl'>Contact Us</h1>
-            <h2 className='lg:text-3xl'>Arihantartexports@gmail.com</h2>
+            <h2 className='lg:text-3xl'>arihantartsexports@gmail.com</h2>
             <h2 className='lg:text-3xl'>+91 9079879306</h2>
           </div>
         </span>
       </div>
-        <div className='h-[3.8rem] md:h-[2rem] bg-[#b88e2f] mt-3 flex justify-center text-[#fff3e3]'>
+        {/* <div className='h-[3.8rem] md:h-[2rem] bg-[#b88e2f] mt-3 flex justify-center text-[#fff3e3]'>
             <p>This Website is created By SUPER-BALLE agency. If you want to create your website mail us at superballe@gmail.com</p>
-        </div>
+        </div> */}
     </div>
   )
 }
